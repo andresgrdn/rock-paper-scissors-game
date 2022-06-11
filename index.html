@@ -21,13 +21,47 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    :root {
+      --btn-size: 200px;
+    }
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    .pick-button {
+      box-sizing: border-box;
+
+      border-width: 12px;
+      border-radius: 50%;
+      min-width: var(--btn-size);
+      min-height: var(--btn-size);
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 50%;
+    }
+
+    /* Buttons icons */
+
+    .rock-icon {
+      border-color: red;
+      background-image: url("images/icon-rock.svg");
+    }
+    .scissors-icon {
+      border-color: yellow;
+      background-image: url("images/icon-scissors.svg");
+    }
+    .paper-icon {
+      border-color: blue;
+      background-image: url("images/icon-paper.svg");
+    }
   </style>
 </head>
 <body>
 
-
+  <button class="pick-button rock-icon" type="button" aria-label="pick rock"></button>
+  <button class="pick-button scissors-icon" type="button" aria-label="pick scissors"></button>
+  <button class="pick-button paper-icon" type="button" aria-label="pick paper"></button>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
