@@ -30,6 +30,7 @@
   box-sizing: border-box;
 }
 
+body,
 p {
   margin: 0;
   padding: 0;
@@ -44,6 +45,11 @@ body {
   font-family: var(--primary-font);
   font-weight: var(--fw-regular);
   font-size: 1.6rem;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
 }
 
 button {
