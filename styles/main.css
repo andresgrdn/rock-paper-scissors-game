@@ -74,8 +74,41 @@
 }
 
 .attribution {
+  position: fixed;
+  bottom: 1.5em;
+  right: 1.5em;
+
+  border-radius: 50%;
+  border: 1px solid red;
+  padding: 1em;
+  min-width: 50px;
+  min-height: 50px;
+
   font-size: 11px;
   text-align: center;
+
+  background-color: papayawhip;
+}
+
+.attribution::after {
+  content: "AG";
+}
+
+.attribution:hover:after {
+  content: "";
+}
+
+.attribution p {
+  display: none;
+}
+
+.attribution:hover {
+  border-radius: 4px;
+  min-height: auto;
+}
+
+.attribution:hover p {
+  display: block;
 }
 
 .attribution a {
