@@ -1,3 +1,34 @@
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 4px solid var(--header-outline);
+  border-radius: 8px;
+  padding: 14px;
+
+  background-image: var(--radial-gradient);
+}
+
+.score-container {
+  border-radius: 4px;
+  padding: 1em;
+
+  text-align: center;
+
+  background-color: white;
+}
+
+.score__label {
+  color: var(--score-text);
+}
+
+.score__counter {
+  font-size: 3.6rem;
+  font-weight: var(--fw-bold);
+  color: var(--dark-text);
+}
+
 .pick-button {
   box-sizing: border-box;
 

@@ -22,12 +22,17 @@
 
   /* Fonts */
   --primary-font: 'Barlow Semi Condensed', sans-serif;
-  --fs-regular: 600;
-  --fs-bold: 700;
+  --fw-regular: 600;
+  --fw-bold: 700;
 }
 
 * {
   box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 html {

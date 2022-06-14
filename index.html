@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
   <!--Fonts-->
@@ -27,56 +29,29 @@
   You Lose
 
   Play Again
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    :root {
-      --btn-size: 200px;
-    }
-
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-
-    .pick-button {
-      box-sizing: border-box;
-
-      border-width: 12px;
-      border-radius: 50%;
-      min-width: var(--btn-size);
-      min-height: var(--btn-size);
-
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 50%;
-    }
-
-    /* Buttons icons */
-
-    .rock-icon {
-      border-color: red;
-      background-image: url("images/icon-rock.svg");
-    }
-    .scissors-icon {
-      border-color: yellow;
-      background-image: url("images/icon-scissors.svg");
-    }
-    .paper-icon {
-      border-color: blue;
-      background-image: url("images/icon-paper.svg");
-    }
-  </style>
 </head>
+
 <body>
+
+  <div class="title-container">
+    <img class="title__image" src="./images/logo.svg" alt="Rock Paper Scissors">
+
+    <div class="score-container">
+      <p class="score__label">Score</p>
+      <p class="score__counter">00</p>
+    </div>
+  </div>
 
   <button class="pick-button rock-icon" type="button" aria-label="pick rock"></button>
   <button class="pick-button scissors-icon" type="button" aria-label="pick scissors"></button>
   <button class="pick-button paper-icon" type="button" aria-label="pick paper"></button>
-  
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
 
   <script src="./scripts/game.js"></script>
 </body>
+
 </html>
