@@ -1,0 +1,35 @@
+.pick-button {
+  box-sizing: border-box;
+
+  border-width: 12px;
+  border-radius: 50%;
+  min-width: var(--btn-size);
+  min-height: var(--btn-size);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%, contain;
+}
+
+/* Buttons icons */
+
+.rock-icon {
+  background-image: url("../images/icon-rock.svg"), var(--rock-gradient);
+}
+
+.scissors-icon {
+  background-image: url("../images/icon-scissors.svg"), var(--scissors-gradient);
+}
+
+.paper-icon {
+  background-image: url("../images/icon-paper.svg"), var(--paper-gradient);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
