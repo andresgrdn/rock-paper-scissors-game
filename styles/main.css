@@ -56,6 +56,23 @@
   background-image: url("../images/icon-paper.svg"), var(--paper-gradient);
 }
 
+/* Open rules button */
+
+.buttons-container {
+  padding: 1em 0;
+}
+
+.buttons-container button {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid var(--header-outline);
+  border-radius: 8px;
+
+  background-image: var(--radial-gradient);
+  color: white;
+  cursor: pointer;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
