@@ -80,6 +80,48 @@ body {
   cursor: pointer;
 }
 
+.rules-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+
+  width: 100%;
+}
+
+.rules {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+
+  background-color: white;
+}
+
+.rules h2 {
+  font-size: 3.6rem;
+}
+
+.rules__image {
+  margin: auto;
+}
+
+.rules__button {
+  border: none;
+  width: 40px;
+  height: 40px;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  cursor: pointer;
+}
+
+.close-icon {
+  background-image: url("../images/icon-close.svg");
+}
+
 .attribution {
   position: fixed;
   bottom: 1.5em;
