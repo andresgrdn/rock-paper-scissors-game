@@ -56,6 +56,7 @@ body {
 
 button {
   padding: 0.4em 1.8em;
+  cursor: pointer;
 }
 
 img {
