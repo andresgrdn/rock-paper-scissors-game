@@ -37,30 +37,50 @@ body {
 }
 
 .pick-button {
+  --base-bg: radial-gradient(#e7e7e7 52%, transparent 0%);
   box-sizing: border-box;
 
-  border-width: 12px;
+  border: none;
   border-radius: 50%;
   min-width: var(--btn-size);
   min-height: var(--btn-size);
 
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50%, contain;
+  background-size: 28%, contain, contain;
+}
+
+.pick-button:active {
+  box-shadow: 0 0px;
 }
 
 /* Buttons icons */
 
 .rock-icon {
-  background-image: url("../images/icon-rock.svg"), var(--rock-gradient);
+  background-image:
+    url(../images/icon-rock.svg),
+    var(--base-bg),
+    var(--rock-gradient);
+
+  box-shadow: 0 4px hsl(349, 71%, 40%);
 }
 
 .scissors-icon {
-  background-image: url("../images/icon-scissors.svg"), var(--scissors-gradient);
+  background-image:
+    url("../images/icon-scissors.svg"),
+    var(--base-bg),
+    var(--scissors-gradient);
+
+  box-shadow: 0 4px hsl(39, 89%, 40%);
 }
 
 .paper-icon {
-  background-image: url("../images/icon-paper.svg"), var(--paper-gradient);
+  background-image:
+    url("../images/icon-paper.svg"),
+    var(--base-bg),
+    var(--paper-gradient);
+
+  box-shadow: 0 4px hsl(230, 89%, 56%);
 }
 
 /* Open rules button */
