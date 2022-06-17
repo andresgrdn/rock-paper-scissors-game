@@ -8,6 +8,13 @@ function chooseRandElement(array) {
   return array[randomIndex]
 }
 
+function updateScoreText(score = 0) {
+  if (!(score >= 0 && score <= 99)) return;
+
+  const scoreText = document.getElementById("scoreText");
+  scoreText.textContent = score;
+}
+
 let rules = {
   rock: {
     'wins': 'scissors',
