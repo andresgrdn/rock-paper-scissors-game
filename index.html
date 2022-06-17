@@ -34,9 +34,33 @@
     </div>
   </div>
 
-  <button class="pick-button rock-icon" type="button" aria-label="pick rock"></button>
-  <button class="pick-button scissors-icon" type="button" aria-label="pick scissors"></button>
-  <button class="pick-button paper-icon" type="button" aria-label="pick paper"></button>
+  <div class="game-container">
+    <div class="first-step">
+      <button class="pick-button rock-icon" type="button" aria-label="pick rock"></button>
+      <button class="pick-button scissors-icon" type="button" aria-label="pick scissors"></button>
+      <button class="pick-button paper-icon" type="button" aria-label="pick paper"></button>
+    </div>
+
+    <div class="second-step">
+      <div class="player-container">
+        <button class="pick-button rock-icon" type="button" aria-label="pick rock"></button>
+
+        <p>You picked</p>
+      </div>
+
+      <div class="cpu-container">
+        <button class="pick-button paper-icon" type="button" aria-label="pick paper"></button>
+
+        <p>The house picked</p>
+      </div>
+    </div>
+
+    <div class="game-state-container">
+      <h2 class="game-state__title">You lose</h2>
+
+      <button class="game-state__try-again-btn">Play again</button>
+    </div>
+  </div>
 
   <div class="buttons-container">
     <button type="button">Rules</button>
