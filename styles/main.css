@@ -183,3 +183,9 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+/* Functions rules */
+
+.rulesview--hidden {
+  display: initial;
+}

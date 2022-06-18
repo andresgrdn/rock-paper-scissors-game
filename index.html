@@ -63,17 +63,18 @@
   </div>
 
   <div class="buttons-container">
-    <button type="button">Rules</button>
+    <button id="openRulesBtn"" type=" button">Rules</button>
   </div>
 
-  <div class="rules-container">
+  <div id="rulesView" class="rules-container">
     <div class="rules">
       <h2>Rules</h2>
 
       <img class="rules__image" src="./images/image-rules.svg" alt="Rules">
 
       <div class="rules__buttons">
-        <button class="rules__button close-icon" type="button" aria-label="close menu button"></button>
+        <button id="closeRulesBtn" class="rules__button close-icon" type="button"
+          aria-label="close menu button"></button>
       </div>
     </div>
   </div>
@@ -86,6 +87,7 @@
   </div>
 
   <script src="./scripts/game.js"></script>
+  <script src="./scripts/rules.js"></script>
 </body>
 
 </html>
