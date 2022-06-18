@@ -36,6 +36,71 @@ body {
   color: var(--dark-text);
 }
 
+.first-step {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  place-items: center;
+
+  max-width: 456px;
+
+  background: center no-repeat url("../images/bg-triangle.svg");
+}
+
+.second-step {
+  display: grid;
+  grid-template-areas:
+    "player player cpu cpu"
+    ". state state .";
+
+  text-align: center;
+  text-shadow: 0 4px 4px hsla(0, 0%, 0%, 0.5);
+
+  color: whitesmoke;
+}
+
+.second-step p {
+  margin-top: 1em;
+
+  font-size: 1.8rem;
+}
+
+.player-container {
+  grid-area: player;
+}
+
+.game-state-container {
+  grid-area: state;
+}
+
+.cpu-container {
+  grid-area: cpu;
+}
+
+.game-state__title {
+  font-size: 4.4rem;
+}
+
+.game-state__try-again-btn {
+  box-shadow: 0 4px 4px hsla(0, 0%, 0%, 0.5);
+  border: none;
+  border-radius: 8px;
+  padding-inline: 3em;
+
+  font-size: 1.6rem;
+  font-weight: var(--fw-regular);
+  white-space: nowrap;
+
+  color: var(--dark-text);
+}
+
+.game-state__try-again-btn:hover {
+  box-shadow: 0 0;
+}
+
+.game-state__try-again-btn:active {
+  box-shadow: inset 0 1px 2px hsla(0, 0%, 0%, 0.5);
+}
+
 .pick-button {
   --base-bg: radial-gradient(#e7e7e7 52%, transparent 0%);
   box-sizing: border-box;
@@ -81,6 +146,8 @@ body {
     var(--paper-gradient);
 
   box-shadow: 0 4px hsl(230, 89%, 56%);
+
+  grid-column: 2 / span 2;
 }
 
 /* Open rules button */
