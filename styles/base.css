@@ -48,7 +48,9 @@ body {
 }
 
 body {
+  padding: 1em;
   width: 100%;
+  min-width: var(--min-width);
   min-height: 100vh;
 
   color: var(--dark-text);

@@ -102,6 +102,7 @@ body {
 }
 
 .pick-button {
+  grid-column: span 2;
   --base-bg: radial-gradient(#e7e7e7 52%, transparent 0%);
   box-sizing: border-box;
 
