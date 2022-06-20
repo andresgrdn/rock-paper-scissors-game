@@ -10,9 +10,11 @@ body {
   justify-content: space-between;
   align-items: center;
 
+  margin: 0 auto;
   border: 4px solid var(--header-outline);
   border-radius: 8px;
   padding: 14px;
+  max-width: 760px;
 
   background-image: var(--radial-gradient);
 }
@@ -36,11 +38,17 @@ body {
   color: var(--dark-text);
 }
 
+.main-container {
+  margin: 0 auto;
+  max-width: 760px;
+}
+
 .first-step {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(4, 1fr);
   place-items: center;
 
+  margin: auto;
   max-width: 456px;
 
   background: center no-repeat url("../images/bg-triangle.svg");
