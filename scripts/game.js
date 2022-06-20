@@ -66,7 +66,7 @@ function showStateContainer() {
 // Main
 function gameLogic(player = "") {
   playerChoose = player;
-  cpuChoose = chooseRandElement(PIECES.filter(piece => piece != playerChoose));
+  cpuChoose = chooseRandElement(PIECES);
 
   const playerbtn = document.createElement("button");
   const cpubtn = document.createElement("button");
@@ -80,6 +80,9 @@ function gameLogic(player = "") {
   if (rules[playerChoose].wins === cpuChoose) {
     gameResult = "win";
     score += 1;
+  }
+  if (playerChoose === cpuChoose) {
+    gameResult = "draw";
   }
   if (rules[playerChoose].lose === cpuChoose) {
     gameResult = "lose";
