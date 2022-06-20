@@ -85,6 +85,7 @@ function gameLogic(player = "") {
     gameResult = "lose";
     score -= 1;
   }
+  if (score < 0) score = 0;
 
   updateScoreText(score);
   updateGameStateText(gameResult);
