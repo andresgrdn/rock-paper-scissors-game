@@ -44,21 +44,17 @@
       </div>
 
       <div id="SecondStepContainer" class="second-step second-step--hidden">
-        <div class="player-container">
-          <button class="pick-button rock-icon" type="button" aria-label="pick rock"></button>
-
+        <div id="PlayerContainer" class="player-container">
           <p>You picked</p>
         </div>
 
         <div id="GameStateContainer" class="game-state-container game-state-container--hidden">
-          <h2 class="game-state__title">You lose</h2>
+          <h2 class="game-state__title">You <span id="GameStateText"></span></h2>
 
-          <button class="game-state__try-again-btn">Play again</button>
+          <button id="PlayAgainButton" class="game-state__try-again-btn">Play again</button>
         </div>
 
-        <div class="cpu-container">
-          <button class="pick-button paper-icon" type="button" aria-label="pick paper"></button>
-
+        <div id="CpuContainer" class="cpu-container">
           <p>The house picked</p>
         </div>
       </div>
@@ -67,7 +63,7 @@
   </main>
 
   <div class="buttons-container">
-    <button id="openRulesBtn"" type=" button">Rules</button>
+    <button style="margin-left: auto;" id="openRulesBtn"" type=" button">Rules</button>
   </div>
 
   <aside id="rulesView" class="rules-container">

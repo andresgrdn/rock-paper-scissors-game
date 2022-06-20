@@ -1,39 +1,20 @@
-const scoreText = document.getElementById("scoreText");
 const secondStepContainer = document.getElementById("SecondStepContainer");
 const firstStepContainer = document.getElementById("FirstStepContainer");
 const gameStateContainer = document.getElementById("GameStateContainer");
+const gameStateText = document.getElementById("GameStateText");
+const scoreText = document.getElementById("scoreText");
+
+const playerContainer = document.getElementById("PlayerContainer");
+const cpuContainer = document.getElementById("CpuContainer");
+
 const rockButton = document.getElementById("RockButton");
 const paperButton = document.getElementById("PaperButton");
 const scissorsButton = document.getElementById("ScissorsButton");
 
+const playAgainButton = document.getElementById("PlayAgainButton");
+
 const PIECES = ['rock', 'paper', 'scissors'];
 let score = 0;
-
-// Helpers
-function chooseRandElement(array) {
-  const randomIndex = Math.floor(Math.random() * array.length);
-
-  return array[randomIndex]
-}
-
-function updateScoreText(score = 0) {
-  if (!(score >= 0 && score <= 99)) return;
-
-  scoreText.textContent = score;
-}
-
-function showFirstStep() {
-  firstStepContainer.classList.toggle("first-step--hidden");
-}
-
-function showSecondStep() {
-  secondStepContainer.classList.toggle("second-step--hidden");
-}
-
-function showStateContainer() {
-  gameStateContainer.classList.toggle("game-state-container--hidden");
-}
-
 let rules = {
   rock: {
     'wins': 'scissors',
@@ -48,40 +29,88 @@ let rules = {
     'lose': 'rock',
   },
 }
+let playerChoose, cpuChoose;
+let gameResult = "";
 
-let playerChoose = prompt(`Please choose one of the following options => ${pieces}`);
-let cpuChoose = chooseRandElement(pieces.filter(piece => piece != playerChoose));
+const defaultBtnClasses = ["pick-button"];
 
-console.log(`Player: ${playerChoose} <==> Cpu: ${cpuChoose}`);
-console.log("Player wins ", rules[playerChoose].wins === cpuChoose);
-console.log("Player Lose ", rules[playerChoose].lose === cpuChoose);
+// Helpers
+function chooseRandElement(array) {
+  const randomIndex = Math.floor(Math.random() * array.length);
 
-/** Rules */
-/**
- * Both cannot use the same piece at the time
- * 
- * The player choose a piece from the pieces available
- * 
- * The cpu choose a random piece from the pieces available
- * 
- * If the player choose rock
- *  cpu choosed from the pieces (paper, scissors)
- *  if cpu choose paper then cpu wins
- *  if cpu choose scissors then cpu loses
- * 
- * If the player choose paper
- *  cpu choosed from the pieces (rock, scissors)
- *  if cpu choose scissors then cpu wins
- *  if cpu choose rock then cpu loses
- * 
- * If the player choose scissors
- *  cpu choosed from the pieces (paper, rock)
- *  if cpu choose rock then cpu wins
- *  if cpu choose paper then cpu loses
- * 
- * when the player wins the score adds one
- * but if the cpu wins the score low one
- * 
- * Play again is returning to the first view
- * but the score is not updated
- */
+  return array[randomIndex]
+}
+
+function updateScoreText(score = 0) {
+  if (!(score >= 0 && score <= 99)) return;
+
+  scoreText.textContent = score;
+}
+
+function updateGameStateText(gameState) {
+  gameStateText.textContent = gameState;
+}
+
+function showFirstStep() {
+  firstStepContainer.classList.toggle("first-step--hidden");
+}
+
+function showSecondStep() {
+  secondStepContainer.classList.toggle("second-step--hidden");
+}
+
+function showStateContainer() {
+  gameStateContainer.classList.toggle("game-state-container--hidden");
+}
+
+// Main
+function gameLogic(player = "") {
+  playerChoose = player;
+  cpuChoose = chooseRandElement(PIECES.filter(piece => piece != playerChoose));
+
+  const playerbtn = document.createElement("button");
+  const cpubtn = document.createElement("button");
+
+  playerbtn.classList.add(...defaultBtnClasses, playerChoose + "-icon");
+  cpubtn.classList.add(...defaultBtnClasses, cpuChoose + "-icon");
+
+  playerContainer.prepend(playerbtn);
+  cpuContainer.prepend(cpubtn);
+
+  if (rules[playerChoose].wins === cpuChoose) {
+    gameResult = "win";
+    score += 1;
+  }
+  if (rules[playerChoose].lose === cpuChoose) {
+    gameResult = "lose";
+    score -= 1;
+  }
+
+  updateScoreText(score);
+  updateGameStateText(gameResult);
+
+  showStateContainer();
+}
+
+rockButton.addEventListener("click", () => {
+  showFirstStep();
+  showSecondStep();
+
+  gameLogic(player = "rock");
+})
+
+paperButton.addEventListener("click", () => {
+  showFirstStep();
+  showSecondStep();
+
+  gameLogic(player = "paper");
+})
+
+scissorsButton.addEventListener("click", () => {
+  showFirstStep();
+  showSecondStep();
+
+  gameLogic(player = "scissors");
+})
+
+playAgainButton.addEventListener("click", () => console.log("hello"))
