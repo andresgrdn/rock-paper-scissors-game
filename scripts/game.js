@@ -3,6 +3,8 @@ const secondStepContainer = document.getElementById("SecondStepContainer");
 const firstStepContainer = document.getElementById("FirstStepContainer");
 const gameStateContainer = document.getElementById("GameStateContainer");
 const rockButton = document.getElementById("RockButton");
+const paperButton = document.getElementById("PaperButton");
+const scissorsButton = document.getElementById("ScissorsButton");
 
 const PIECES = ['rock', 'paper', 'scissors'];
 let score = 0;
