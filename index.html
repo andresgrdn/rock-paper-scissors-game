@@ -24,17 +24,18 @@
 </head>
 
 <body>
+  <header style="margin: 0 auto;max-width: 760px;" class="title-container">
 
-  <div class="title-container">
     <img class="title__image" src="./images/logo.svg" alt="Rock Paper Scissors">
 
     <div class="score-container">
       <p class="score__label">Score</p>
       <p id="scoreText" class="score__counter">00</p>
     </div>
-  </div>
+  </header>
 
-  <div class="game-container">
+  <main style="margin: 0 auto;max-width: 760px;">
+    <div class="game-container">
 
       <div id="FirstStepContainer" style="margin: auto;" class="first-step">
         <button class="pick-button rock-icon" type="button" aria-label="pick rock"></button>
@@ -42,33 +43,34 @@
         <button class="pick-button paper-icon" type="button" aria-label="pick paper"></button>
       </div>
 
-    <div class="second-step">
-      <div class="player-container">
-        <button class="pick-button rock-icon" type="button" aria-label="pick rock"></button>
+      <div id="SecondStepContainer" class="second-step second-step--hidden">
+        <div class="player-container">
+          <button class="pick-button rock-icon" type="button" aria-label="pick rock"></button>
 
-        <p>You picked</p>
+          <p>You picked</p>
+        </div>
+
+        <div id="GameStateContainer" class="game-state-container game-state-container--hidden">
+          <h2 class="game-state__title">You lose</h2>
+
+          <button class="game-state__try-again-btn">Play again</button>
+        </div>
+
+        <div class="cpu-container">
+          <button class="pick-button paper-icon" type="button" aria-label="pick paper"></button>
+
+          <p>The house picked</p>
+        </div>
       </div>
 
-      <div class="game-state-container">
-        <h2 class="game-state__title">You lose</h2>
-
-        <button class="game-state__try-again-btn">Play again</button>
-      </div>
-
-      <div class="cpu-container">
-        <button class="pick-button paper-icon" type="button" aria-label="pick paper"></button>
-
-        <p>The house picked</p>
-      </div>
     </div>
-
-  </div>
+  </main>
 
   <div class="buttons-container">
     <button id="openRulesBtn"" type=" button">Rules</button>
   </div>
 
-  <div id="rulesView" class="rules-container">
+  <aside id="rulesView" class="rules-container">
     <div class="rules">
       <h2>Rules</h2>
 
@@ -79,7 +81,7 @@
           aria-label="close menu button"></button>
       </div>
     </div>
-  </div>
+  </aside>
 
   <div class="attribution">
     <p>
