@@ -1,3 +1,7 @@
+const secondStepContainer = document.getElementById("SecondStepContainer");
+const firstStepContainer = document.getElementById("FirstStepContainer");
+const gameStateContainer = document.getElementById("GameStateContainer");
+
 let score = 0;
 let pieces = ['rock', 'paper', 'scissors'];
 
@@ -13,6 +17,18 @@ function updateScoreText(score = 0) {
 
   const scoreText = document.getElementById("scoreText");
   scoreText.textContent = score;
+}
+
+function showFirstStep() {
+  firstStepContainer.classList.toggle("first-step--hidden");
+}
+
+function showSecondStep() {
+  secondStepContainer.classList.toggle("second-step--hidden");
+}
+
+function showStateContainer() {
+  gameStateContainer.classList.toggle("game-state-container--hidden");
 }
 
 let rules = {
