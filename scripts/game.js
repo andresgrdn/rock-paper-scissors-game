@@ -1,9 +1,11 @@
+const scoreText = document.getElementById("scoreText");
 const secondStepContainer = document.getElementById("SecondStepContainer");
 const firstStepContainer = document.getElementById("FirstStepContainer");
 const gameStateContainer = document.getElementById("GameStateContainer");
+const rockButton = document.getElementById("RockButton");
 
+const PIECES = ['rock', 'paper', 'scissors'];
 let score = 0;
-let pieces = ['rock', 'paper', 'scissors'];
 
 // Helpers
 function chooseRandElement(array) {
@@ -15,7 +17,6 @@ function chooseRandElement(array) {
 function updateScoreText(score = 0) {
   if (!(score >= 0 && score <= 99)) return;
 
-  const scoreText = document.getElementById("scoreText");
   scoreText.textContent = score;
 }
 
@@ -81,18 +82,4 @@ console.log("Player Lose ", rules[playerChoose].lose === cpuChoose);
  * 
  * Play again is returning to the first view
  * but the score is not updated
-
- Requirements
-
- Score
- Rules
- 
- You Picked
- The House Picked
- 
- You Win
- You Lose
- 
- Play Again
-
  */
