@@ -261,15 +261,12 @@ body {
 
 .first-step--hidden {
   display: none;
-  background-color: red;
 }
 
 .second-step--hidden {
   display: none;
-  background-color: blue;
 }
 
 .game-state-container--hidden {
   display: none;
-  background-color: yellow;
 }
