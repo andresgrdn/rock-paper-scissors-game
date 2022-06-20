@@ -113,4 +113,13 @@ scissorsButton.addEventListener("click", () => {
   gameLogic(player = "scissors");
 })
 
-playAgainButton.addEventListener("click", () => console.log("hello"))
+playAgainButton.addEventListener("click", () => {
+  gameStateText.textContent = "";
+  cpuContainer.removeChild(cpuContainer.firstChild);
+  playerContainer.removeChild(playerContainer.firstChild);
+
+  showStateContainer();
+  showSecondStep();
+
+  showFirstStep();
+})
