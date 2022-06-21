@@ -44,7 +44,10 @@ function chooseRandElement(array) {
 function updateScoreText(score = 0) {
   if (!(score >= 0 && score <= 99)) return;
 
-  scoreText.textContent = score;
+  scoreText.textContent =
+    score < 10
+      ? "0" + score
+      : score;
 }
 
 function updateGameStateText(gameState) {
