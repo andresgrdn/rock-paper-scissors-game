@@ -87,8 +87,9 @@ function gameLogic(player = "") {
   if (playerChoose === cpuChoose) {
     gameResult = "draw";
   }
-  if (rules[playerChoose].lose === cpuChoose) {
+  else if (rules[playerChoose].lose === cpuChoose) {
     gameResult = "lose";
+    playAgainButton.classList.toggle("game-state__try-again-btn--lose");
     score -= 1;
   }
   if (score < 0) score = 0;
@@ -121,6 +122,10 @@ scissorsButton.addEventListener("click", () => {
 })
 
 playAgainButton.addEventListener("click", () => {
+  if (gameStateText.textContent === "lose") {
+    playAgainButton.classList.toggle("game-state__try-again-btn--lose");
+  }
+
   gameStateText.textContent = "";
   cpuContainer.removeChild(cpuContainer.firstChild);
   playerContainer.removeChild(playerContainer.firstChild);
