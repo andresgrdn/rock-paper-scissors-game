@@ -1,6 +1,7 @@
 .second-step {
   grid-template-areas:
     "player state cpu";
+  align-items: center;
 }
 
 .buttons-container button {
