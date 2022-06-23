@@ -195,12 +195,13 @@ body {
   bottom: 0;
 
   width: 100%;
+
+  background-color: hsla(0, 0%, 20%, 0.333);
 }
 
 .rules {
   display: grid;
-  align-items: center;
-  text-align: center;
+  place-items: center;
   height: 100%;
 
   background-color: white;
@@ -275,7 +276,7 @@ body {
 /* Functions rules */
 
 .rulesview--hidden {
-  display: initial;
+  display: grid;
 }
 
 .first-step--hidden {

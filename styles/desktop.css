@@ -6,3 +6,37 @@
 .buttons-container button {
   margin: initial;
 }
+
+.rules-container {
+  place-content: center;
+}
+
+.rules {
+  display: grid;
+  grid-template-areas:
+    "title close-btn"
+    "rules-img rules-img";
+  gap: 1em;
+
+  border-radius: 8px;
+  padding: 1em;
+  width: 400px;
+}
+
+.rules h2 {
+  grid-area: title;
+  justify-self: left;
+}
+
+.rules__image {
+  grid-area: rules-img;
+  width: 100%;
+}
+
+.rules__button {
+  grid-area: close-btn;
+  justify-self: right;
+
+  /* Mantain size but place the icon at the end*/
+  background-position: 100%;
+}
