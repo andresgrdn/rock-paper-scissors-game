@@ -66,6 +66,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - [Storage API | MDN docs site](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) - This helped me to saved the score value and use it when the user visit again the game website. It is a tutorial from the MDN docs, It has some examples that help me to understand how to use the Storage API.
 - [DOMContentLoaded | MDN docs site](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) - This is the document event docs. It is good to learn how this event works. I used it for updating the score when the page is reload or first loaded.
+- [Grid track-sizing | CSSWG draft](https://drafts.csswg.org/css-grid/#track-sizing) - This docs say something about explicit and implicit track sizing, more easy to understand there are default values whenever grid layout is used.
 
 ## Author
 
