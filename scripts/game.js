@@ -1,3 +1,5 @@
+import { getScore, setScore } from "./score_storage.js";
+
 const secondStepContainer = document.getElementById("SecondStepContainer");
 const firstStepContainer = document.getElementById("FirstStepContainer");
 const gameStateContainer = document.getElementById("GameStateContainer");
@@ -14,7 +16,7 @@ const scissorsButton = document.getElementById("ScissorsButton");
 const playAgainButton = document.getElementById("PlayAgainButton");
 
 const PIECES = ['rock', 'paper', 'scissors'];
-let score = 0;
+let score = getScore();
 let rules = {
   rock: {
     'wins': 'scissors',
@@ -98,27 +100,29 @@ function gameLogic(player = "") {
   updateGameStateText(gameResult);
 
   showStateContainer();
+
+  setScore(score);
 }
 
 rockButton.addEventListener("click", () => {
   showFirstStep();
   showSecondStep();
 
-  gameLogic(player = "rock");
+  gameLogic("rock");
 })
 
 paperButton.addEventListener("click", () => {
   showFirstStep();
   showSecondStep();
 
-  gameLogic(player = "paper");
+  gameLogic("paper");
 })
 
 scissorsButton.addEventListener("click", () => {
   showFirstStep();
   showSecondStep();
 
-  gameLogic(player = "scissors");
+  gameLogic("scissors");
 })
 
 playAgainButton.addEventListener("click", () => {
