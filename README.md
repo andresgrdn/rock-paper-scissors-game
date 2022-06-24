@@ -55,27 +55,13 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Storage API
 
-To see how you can add code snippets, see below:
+There is an api that allows the websites to storage some data into the user local storage, I used this api to save the game score even when the browser is closed. But I have a problem when the page loads the score was not being updated with the value saved. The solution that I used, was the document DOMcontentloaded event listener, into the callback I could update the score view with the score saved.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+I have a better understanding about grid sizing
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+Reading the CSSWG grid draft I understand that when grid layout is used in every situation there are default sizes for the column and the rows.
 
 ### Continued development
 
