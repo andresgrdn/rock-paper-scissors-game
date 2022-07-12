@@ -54,13 +54,7 @@ There is an api that allows the websites to storage some data into the user loca
 
 I have a better understanding about grid sizing
 
-Reading the CSSWG grid draft I understand that when grid layout is used in every situation there are default sizes for the column and the rows.
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Of reading the CSSWG grid draft I understand that when grid layout is used in every situation there are default sizes for the column and the rows, and that is for all the css properties, I think first think to do when a new property appear, is a good idea to see the defaults values first.
 
 ### Useful resources
 
